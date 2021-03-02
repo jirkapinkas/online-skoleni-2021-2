@@ -15,7 +15,7 @@ GROUP BY z.prijmeni, z.jmeno
 HAVING COUNT(l.cislo_letu) > (
   SELECT COUNT(l.cislo_letu) AS pocet_letu_pilota FROM AERO.zamestnanec z, AERO.pilot p, AERO.let l 
   WHERE z.zamestnanec_id = p.zamestnanec_id AND p.pilot_id = l.pilot_id
-  AND z.jmeno = 'Zuzana' AND z.prijmeni = 'Komárková'
+  AND z.jmeno = 'Zuzana' AND z.prijmeni = 'Komï¿½rkovï¿½'
 )
 ORDER BY z.prijmeni, z.jmeno;
 
@@ -220,7 +220,7 @@ WHERE z.zamestnanec_id = p.zamestnanec_id
     WHERE z_vnitrni.zamestnanec_id = p_vnitrni.zamestnanec_id
   );
   
--- nebo s použitím exists ve vnitøní funkci
+-- nebo s pouï¿½itï¿½m exists ve vnitï¿½nï¿½ funkci
 SELECT z.jmeno, z.prijmeni, z.plat
 FROM AERO.zamestnanec z, AERO.pilot p
 WHERE z.zamestnanec_id = p.zamestnanec_id
@@ -282,4 +282,4 @@ INSERT INTO AERO.typ_letadla_bak (typ_letadla_id, nazev, pocet_mist)
 SELECT typ_letadla_id, nazev, pocet_mist FROM AERO.typ_letadla;
 -- nebo
 INSERT INTO AERO.typ_letadla_bak 
-SELECT * FROM AERO.typ_letadla; -
+SELECT * FROM AERO.typ_letadla;
