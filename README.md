@@ -2,4 +2,4 @@
 
 - 1-kurz-sql-dotazy/prednasky/2-oracle-xe.pdf
 
-## Poznámka: Testovací server bude funkční do 20.04.2021
+## Poznámka: Testovací server co jsme používali na školení bude funkční do 20.04.2021
